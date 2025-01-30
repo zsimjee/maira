@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy 1st Birthday, Princess!</title>
     <style>
+        /* Previous styles remain the same until unicorn-container */
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             background-color: #fce4ec;
@@ -21,21 +22,18 @@
             padding: 20px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-
         h1 {
             color: #ff69b4;
             font-size: 3em;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
-
         .birthday-message {
             font-size: 1.5em;
             color: #666;
             margin: 20px 0;
             line-height: 1.6;
         }
-
         .unicorn-container {
             margin: 30px 0;
             display: flex;
@@ -44,18 +42,35 @@
             flex-wrap: wrap;
         }
 
+        /* New styles for images */
+        .unicorn-container img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Rest of your previous styles */
         .sparkles {
             position: absolute;
             pointer-events: none;
             animation: sparkle 2s infinite;
         }
-
         @keyframes sparkle {
             0% { transform: scale(1); opacity: 1; }
             50% { transform: scale(1.2); opacity: 0.8; }
             100% { transform: scale(1); opacity: 1; }
         }
-
         .rainbow-text {
             background: linear-gradient(to right, 
                 violet, indigo, blue, green, yellow, orange, red);
@@ -65,7 +80,6 @@
             font-size: 2em;
             margin: 20px 0;
         }
-
         .balloon {
             width: 60px;
             height: 70px;
@@ -76,7 +90,6 @@
             margin: 20px;
             display: inline-block;
         }
-
         .balloon:before {
             content: "";
             width: 2px;
@@ -86,7 +99,6 @@
             bottom: -80px;
             left: 30px;
         }
-
         @keyframes float {
             0% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
@@ -95,6 +107,7 @@
     </style>
 </head>
 <body>
+    <!-- Rest of your HTML remains exactly the same -->
     <div class="container">
         <div class="balloon"></div>
         <div class="balloon" style="animation-delay: 1s;"></div>
@@ -105,17 +118,14 @@
         <div class="birthday-message">
             We are excited to celebrate one magical year of joy and wonder!
         </div>
-
         <div class="rainbow-text">
             One Year of Magic! ✨
         </div>
-
         <div class="unicorn-container">
             <img src="https://cdn.shopify.com/s/files/1/0757/8393/0173/files/buleball_a_beautiful_unicorn_19f36e05-21f4-4cd8-8fc3-70c86401450d_480x480.jpg?v=1699024007" alt="Magical unicorn" />
             <img src="https://imgs.search.brave.com/2z2p_j5UbHRvMg2OhyXiu-9VNbPwasCa8SOgMht-n9o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzE1L2Fk/L2EzLzE1YWRhMzkz/ZDNmNDE0NmVlYjEw/NWEyYTE5NDgzYmJm/LmpwZw" alt="Birthday cake" />
             <img src="https://imgs.search.brave.com/MH041toorcC-j9zAcYhzF3ldDY94BrmqAZrn6MAvQuw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2ZhL2Iw/LzE5L2ZhYjAxOWNl/NTIxNjllZGI1NzAw/NWEwMDk4ODk5MDhl/LmpwZw" alt="Birthday presents" />
         </div>
-
         <div class="birthday-message">
             Wishing our precious little one a day filled with love, 
             laughter, and endless magical moments! 🎈✨
